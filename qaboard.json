@@ -1,0 +1,15 @@
+{ "questions": [{
+    "author": "Veruca Salt",
+    "description": "San Francisco",
+    "qtn": "Estate"
+  },
+	{
+    "author": "Mike Teavee",
+    "description": "Seattle",
+    "qtn": "Condo"
+  }],
+  "answers": [{
+    "author": "Andrea",
+    "content": "Did not fall down."
+  }]
+}
