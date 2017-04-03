@@ -1,0 +1,26 @@
+<!-- update form -->
+{{#if updateQtnForm}}
+  <h4>Update {{question.author}}'s {{question.qtn}}</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="author">Author</label>
+        {{input value=author id="author" placeholder=question.author class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="qtn">Qustion</label>
+        {{input value=qtn id="qtn" placeholder=question.qtn class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="description">description</label>
+        {{input value=description id="description" placeholder=question.description class="form-control"}}
+      </div>
+			<!-- update button to send 'update' action -->
+      <button {{action 'update' question}} class="btn btn-success">Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'updateQtnForm'}} class="btn">Update Question</button>
+{{/if}}

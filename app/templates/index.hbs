@@ -1,0 +1,19 @@
+
+<div class="container">
+	<p>Hello, this is index page.
+	We hope you find exactly what you're looking for !
+	<span><br>{{new-question saveQtn="saveQtn"}}</span>
+	<h3>Questions</h3>
+	</p><hr>
+	<ul>
+		{{#each model.questions as |question|}}
+			{{question-tile question=question}}
+		{{/each}}
+	</ul>
+	answers
+	<ul>
+		{{#each model.answers as |answer|}}
+		<li>{{answer.author}}
+		</li>{{/each}}
+	</ul>
+</div>

@@ -1,0 +1,24 @@
+<!-- if statement to display the question form if the
+button is clicked, otherwise the form is hidden -->
+
+{{#if qtnFormShowing}}
+<div class="form-group">
+	<div class="author">
+		<label for="author">Author</label>
+		{{input id="author" value=author class="form-control" placeholder="Becky McConney"}}
+	</div>
+	<div class="qtn">
+		<label for="qtn">Question</label>
+		{{input id="qtn" value=qtn class="form-control" placeholder="Question here..."}}
+	</div>
+	<div class="description">
+		<label for="description">Description</label><br>
+		{{input id="description" value=description class="form-control"}}
+	</div>
+	<button class="btn btn-success" {{action 'saveQtn'}}>Publish question</button>
+</div>
+{{else}}
+<div class="qtn-button">
+	<button class="btn btn-primary" {{action 'showForm'}}>Ask Question</button>
+</div>
+{{/if}}

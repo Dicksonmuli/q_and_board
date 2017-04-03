@@ -1,0 +1,18 @@
+.nav-right{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+li{
+	list-style-type: none;
+}
+.tags:hover{
+	background-color: rgb(157, 203, 236);
+}
+.qtn-button{
+display: flex;
+justify-content: flex-end;
+}
+footer{
+  text-align: center;
+}

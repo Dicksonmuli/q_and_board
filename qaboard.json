@@ -1,15 +1,15 @@
 { "questions": [{
     "author": "Veruca Salt",
-    "description": "San Francisco",
-    "qtn": "Estate"
+    "description": "First let's add in the code to delete a review. This part is more or less the same as when we previously walked through deleting a rental, before building the one-to-many relationship. Don't forget to pass the name of the ",
+    "qtn": "When we delete the parent in a one-to-many relationship, "
   },
 	{
     "author": "Mike Teavee",
-    "description": "Seattle",
-    "qtn": "Condo"
+    "description": "before building the one-to-many relationship. Don't forget to pass the name of the  action down to the component, through any intermediary components.",
+    "qtn": "Moving forward, all new reviews we create will be associated with their rental."
   }],
   "answers": [{
     "author": "Andrea",
-    "content": "Did not fall down."
+    "content": " simply because we did not have that capability until now.) As such, we need to clear our database because the previous data no longer matches the new format we've defined. We can easily delete all Firebase entries by clicking the red X that appears when we hover over the name of our database."
   }]
 }

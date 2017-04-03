@@ -1,0 +1,13 @@
+<h3>{{question.qtn}}</h3><hr>
+<p>{{question.description}}</p><br>
+Author: {{question.author}}
+<!-- a delete button to destroy answer record when clicked -->
+<button type="button" name="button" {{action 'delete' question}} class="qtn-button">Delete Question</button>
+<div class="answer">
+	<h3>Answers</h3><hr>
+	<ul>
+	{{#each question.answers as |answer|}}
+		{{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
+	{{/each}}
+</ul>
+</div>
