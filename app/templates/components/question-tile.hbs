@@ -1,5 +1,16 @@
 
 <li><div class="container">
 	{{#link-to 'question' question.id}}
-{{question.qtn}} <br>
-{{/link-to}}{{question.author}}'s {{#link-to 'about'}}<button class="tags">js</button> {{/link-to}}{{#link-to 'about'}}<button class="tags">python</button> {{/link-to}}{{#link-to 'about'}}<button class="tags">ember</button> {{/link-to}}{{#link-to 'about'}}<button class="tags">angular</button> {{/link-to}}		</div><br> </li>
+
+	<div class="col-md-1" style="border: 1px solid grey;">
+		<a class="likes_up" href="#" {{action "voteUp" this}}> <span class="glyphicon glyphicon-arrow-up"></span></a>
+													<div class="likes_numero">vote{{answer.vote}}</div>
+													<a class="likes_down" href="#" {{action "voteDown" this }}>  <span class="glyphicon glyphicon-arrow-down"></span></a>
+	</div>
+	<div class="col-md-11">
+		{{question.qtn}}
+	</div>
+
+
+ <br>
+{{/link-to}}{{question.author}}'s {{#link-to 'about'}}<button class="tags">js</button> {{/link-to}}{{#link-to 'about'}}<button class="tags">python</button> {{/link-to}}{{#link-to 'about'}}<button class="tags">ember</button> {{/link-to}}{{#link-to 'about'}}<button class="tags">Add to Favorites</button> {{/link-to}}		</div><br> </li>
