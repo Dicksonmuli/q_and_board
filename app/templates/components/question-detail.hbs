@@ -6,7 +6,7 @@ Author: {{question.author}}
 <div class="answer">
 	<h3>Answers</h3><hr>
 	<ul>
-	{{#each question.answers as |answer|}}
+	{{#each sortedAnswers as |answer|}}
 		{{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
 	{{/each}}
 </ul>

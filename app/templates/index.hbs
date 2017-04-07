@@ -1,14 +1,49 @@
 
 <div class="container">
-	<p>Hello, this is index page.
-	We hope you find exactly what you're looking for !
-	<span><br>{{new-question saveQtn="saveQtn"}}</span>
-	<h3>Questions</h3>
-	</p><hr>
-	<ul>
-		{{#each model.questions as |question|}}
-			{{question-tile question=question}}
-		{{/each}}
-	</ul>
-	
+
+	<div class="row">
+		<div class="col-xs-9">
+			<p>Hello, this is index page.
+			We hope you find exactly what you're looking for !
+			<span><br>{{new-question saveQtn="saveQtn"}}</span>
+			<h3>Questions</h3>
+			</p><hr>
+			<ul>
+				{{#each model.questions as |question|}}
+					{{question-tile question=question}}
+				{{/each}}
+			</ul>
+		</div>
+		<div class="col-xs-3" id="things-right">
+			<!-- side posts -->
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span3">
+						<table class="table">
+							<th>Posts</th>
+							<tr>
+								<td>{{#link-to 'about'}}Title  <small>by {{question.Author}}</small>{{/link-to}}</td>
+							</tr>
+						</table>
+					</div>
+					<div class="span9">
+						<table class="table">
+							<th>Blog</th>
+							<tr>
+								<td>{{#link-to 'about'}}Title <small>by {{question.Author}}</small>{{/link-to}}</td>
+							</tr>
+							<tr>
+								<td>
+									<form class="form-group">
+										{{input class="form-control" value=contribution id="contribution"}}
+									</form>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>
