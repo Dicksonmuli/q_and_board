@@ -7,7 +7,17 @@ Author: {{question.author}}
 	<h3>Answers</h3><hr>
 	<ul>
 	{{#each sortedAnswers as |answer|}}
-		{{render 'post' this}}{{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
+	<p>
+		<div class="col-md-1" style="border: 1px solid grey;">
+			<a class="likes_up" href="#" {{action "voteUp" this}}> <span class="glyphicon glyphicon-arrow-up"></span></a>
+														<div class="likes_numero">vote{{answer.vote}}</div>
+														<a class="likes_down" href="#" {{action "voteDown" this }}>  <span class="glyphicon glyphicon-arrow-down"></span></a>
+		</div>
+		<div class="col-md-11">
+			{{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
+		</div>
+	</p>
+
 	{{/each}}
 </ul>
 </div>
