@@ -1,1 +1,14 @@
-{{yield}}
+{{#if ratingForm}}
+<form>
+	<div class="form-group">
+		<div class="">
+			<label for="rating"></label>
+			{{input placeholder="1" class="form-control" value=rating id="rating" type="number"}}
+		</div>
+	<button type="button" {{action 'saveRating'}} class="btn btn-success" name="button">Save</button>
+</form>
+{{else}}
+<div class="qtn-button">
+	<button type="button" {{action 'newRating'}} class="btn btn-primary" name="button">Rate</button>
+</div>
+{{/if}}
