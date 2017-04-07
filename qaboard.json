@@ -10,6 +10,7 @@
   }],
   "answers": [{
     "author": "Andrea",
+    "vote": 1,
     "content": " simply because we did not have that capability until now.) As such, we need to clear our database because the previous data no longer matches the new format we've defined. We can easily delete all Firebase entries by clicking the red X that appears when we hover over the name of our database."
   }]
 }
