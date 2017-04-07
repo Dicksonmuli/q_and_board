@@ -16,6 +16,8 @@ export default Ember.Route.extend({
 			});
 			this.transitionTo('question', question);
 		},
+		
+
 		// to destroy an answer in a certain question
 		destroyAnswer(answer){
 			answer.destroyRecord();

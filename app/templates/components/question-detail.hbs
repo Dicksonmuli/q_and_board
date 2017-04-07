@@ -7,7 +7,7 @@ Author: {{question.author}}
 	<h3>Answers</h3><hr>
 	<ul>
 	{{#each sortedAnswers as |answer|}}
-		{{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
+		{{star-rating item=answer rating=answer.rating on-click="updateRating"}}{{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
 	{{/each}}
 </ul>
 </div>
